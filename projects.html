@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Projects</title>
+<style>
+body {
+  font-family: 'Alice', serif;
+  margin: 0;
+  padding: 0 2rem;
+  background-color: #f4f1e8;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #9b4819;
+  font-family: 'Radley', serif;
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 1000px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  grid: flex;
+}
+
+.section h2 {
+  color: #9b4819;
+  font-family: 'Radley', serif;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #7a3414;
+  color: white;
+  border: 2px solid #f4f1e8;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Radley', serif;
+  font-size: 16px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #9b4819;
+  transform: scale(1.05);
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.modal-content h3 {
+  font-family: 'Radley', serif;
+  color: #9b4819;
+  margin-bottom: 15px;
+}
+
+.modal-content img,
+.modal-content video {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+
+.close-btn {
+  background: #ff5c1a;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Radley', serif;
+}
+
+.close-btn:hover {
+  background: #e14c0f;
+}
+</style>
+</head>
+<body>
+
+<h1>My Projects</h1>
+
+<!-- Medical Skills Section -->
+<div class="section">
+  <h2>Medical Skills</h2>
+  <p>Here are some of my medical-related blogs, articles, and videos.</p>
+  <button class="btn" onclick="openModal('medical')">Learn More</button>
+</div>
+
+<div class="section">
+  <h2>Graphic Design</h2>
+  <p>Some of my creative graphic design works and visual projects.</p>
+  <button class="btn" onclick="openModal('graphic')">Learn More</button>
+</div>
+
+
+<div class="section">
+  <h2>Web Development</h2>
+  <p>Websites, apps, and coding projects I have developed.</p>
+  <button class="btn" onclick="openModal('web')">Learn More</button>
+</div>
+
+
+<div id="medical" class="modal">
+  <div class="modal-content">
+    <h3>Medical Projects</h3>
+    <p>Blogs, articles, and videos in the medical field.</p>
+    <a href="https://1drv.ms/w/c/825130bc7fe73f97/ERu-mFmQUXVLtq5D4quZiq8B3-szVEzath1ofgszsTRdyg?e=Xsua0t">📄 Blog:Understanding Human Anatomy.</a><br>
+    <a href="https://1drv.ms/w/c/825130bc7fe73f97/EZm_9DgM-3dGv9lHVy-y5oIBax8lRRD8UIxPZvXWA6NXlA?e=n0Dl3R">📄 Blog: Decoding Urine</a><br>
+    <video controls>
+      <source src="Liver%20Function%20Tests%204.mp4" type="video/mp4">
+      
+    </video>
+    <video controls>
+      <source src="Ozempic.mp4" type="video/mp4">
+      
+    </video>
+    <button class="close-btn" onclick="closeModal('medical')">Close</button>
+  </div> 
+</div>
+
+
+<div id="graphic" class="modal">
+  <div class="modal-content">
+    <h3>Graphic Design Projects</h3>
+    <p>Images and visual designs.</p>
+    <img src="WHERE BEAUTY BEGINS.jpg" alt="Design 1">
+    <img src="RACS KITCHEN.jpg" alt="Design 2">
+    <img src="Weekend Baddies Night.jpg" alt="Design 3">
+    <button class="close-btn" onclick="closeModal('graphic')">Close</button>
+  </div>
+</div>
+
+
+<div id="web" class="modal">
+  <div class="modal-content">
+    <h3>Web Development Projects</h3>
+    <p>Websites, apps, and code projects.</p>
+    <a href="portfolio.html">💻 Portfolio Website</a><br>
+    <a href="calculator.html">💻 Calculator App</a><br>
+    <a href="weather.html">💻 Weather App</a><br>
+    <button class="close-btn" onclick="closeModal('web')">Close</button>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+</script>
+
+</body>
+</html>

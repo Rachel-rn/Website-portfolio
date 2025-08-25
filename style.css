@@ -1,0 +1,54 @@
+body{
+    background-color: #f4f1e8;
+    text-align: center;
+    margin-top: 7rem;
+    padding: 2rem;
+}
+.name{
+    font-family: 'Radley', serif; 
+    font-size: 36px;
+
+}
+.black-text{
+    color: black;
+}
+.colored-text{
+    color:#9b4819 ;
+   
+}
+.tagline{
+    color: black;
+    font-size:20px;
+   font-family: 'Alice', serif;
+}
+
+.logo {
+   
+     width: 80px;    
+    height: auto;   
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.btn{
+  
+    padding: 10px 10px;
+    background-color:#7a3414;
+    color: white;
+    border-radius: 10px;
+    border:2px solid #f4f1e8;
+    cursor: pointer;
+    font-family: 'Radley', serif;
+    font-size: 16px;
+    transition: all 0.3s ease; 
+    text-decoration: none;
+    
+}
+.button-container {
+  margin-top: 5rem; 
+  text-align: center;  
+}
+.btn:hover {
+    background-color:  #9b4819; 
+    transform: scale(1.05);   
+}
